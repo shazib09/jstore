@@ -28,8 +28,10 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar:   const CustomNavBar(),
       body:     Column(
         children: [
+
+          //hero Carousel Slider
           SizedBox(
-              child: CarouselSlider(
+            child: CarouselSlider(
             options: CarouselOptions(
               aspectRatio: 2.0,
               enlargeCenterPage: true,
@@ -43,23 +45,10 @@ class HomeScreen extends StatelessWidget {
            ),
 
            const SectionTitle(title: "RECOMMEDED",),
+           ProductCarsouel( products: Product.products.where((products) => products.isRecommended).toList() ),
 
-          // Product Cards
-
-             Stack(
-              children: [
-                  Container(
-                        width: MediaQuery.of(context).size.width/2.5,
-                      height: 150,
-                      decoration:  const BoxDecoration(),
-                       child: Image.network( Product.products[0].imageUrl, fit: BoxFit.cover,),
-
-
-                  ),
-                  Text(Product.products[0].name),
-              ],
-            )
-
+            const SectionTitle(title: "Most Popular",),
+           ProductCarsouel( products: Product.products.where((products) => products.isPopular ).toList() ),
 
 
 
@@ -72,6 +61,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
 

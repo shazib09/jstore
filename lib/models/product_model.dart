@@ -64,7 +64,7 @@ class Product extends Equatable{
        imageUrl: "https://images.unsplash.com/photo-1508771400123-e194ad75c0e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3804&q=80",
          price: 32, 
        isRecommended: true, 
-       isPopular: false, ),
+       isPopular: true, ),
 
 
 
@@ -76,7 +76,7 @@ class Product extends Equatable{
        imageUrl: "https://images.unsplash.com/photo-1575330933415-cea1e7ce53eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3774&q=80",
          price: 32, 
        isRecommended: true, 
-       isPopular: false, ),
+       isPopular: true, ),
 
 
 

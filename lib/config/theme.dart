@@ -35,7 +35,7 @@ TextTheme textTheme(){
     ),
        headlineSmall: TextStyle(
       color: Colors.black,
-      fontSize: 12,
+      // fontSize: ,
       fontWeight: FontWeight.bold,
     ),
        titleLarge: TextStyle(
@@ -52,7 +52,7 @@ TextTheme textTheme(){
 
        bodyMedium: TextStyle(
       color: Colors.black,
-      fontSize: 36,
+      fontSize: 8,
       fontWeight: FontWeight.bold,
     ),
 
