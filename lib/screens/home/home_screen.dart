@@ -27,6 +27,7 @@ class HomeScreen extends StatelessWidget {
       appBar:  const  CustomAppBar(title: "Zero to helo"),
       bottomNavigationBar:   const CustomNavBar(),
       body:     Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
 
           //hero Carousel Slider

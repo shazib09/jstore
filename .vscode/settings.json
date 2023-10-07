@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "SEction Title",
-        "Product Carousel with Stack and ListView "
+        "Product Carousel with Stack and ListView ",
+        "Product Catalog Added"
     ]
 }

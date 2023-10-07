@@ -3,10 +3,13 @@ import '../models/models.dart';
 
 class ProductCard extends StatelessWidget {
  final Product products;
+ final double widthFactor;
+
   const ProductCard({
     
     super.key,
     required this.products,
+    this.widthFactor = 2.5,
   });
 
   @override
@@ -14,7 +17,7 @@ class ProductCard extends StatelessWidget {
     return Stack(
      children: [
          Container(
-               width: MediaQuery.of(context).size.width/2.5,
+               width: MediaQuery.of(context).size.width/widthFactor,
              height: 150,
              decoration:  const BoxDecoration(),
               child: Image.network( products.imageUrl, fit: BoxFit.cover,),

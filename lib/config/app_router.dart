@@ -1,6 +1,7 @@
 // ignore_for_file: dead_code
 
 import 'package:flutter/material.dart';
+import 'package:jstore/models/models.dart';
 // import 'package:flutter/widgets.dart';
 
 import 'package:jstore/screens/screens.dart';
@@ -19,7 +20,7 @@ class AppRouter{
            return  CartScreen.route();
     
     case CatalogScreen.routename: 
-           return  CatalogScreen.route();
+           return  CatalogScreen.route(categories: settings.arguments as Category);
     
      case WishlisttScreen.routename: 
            return  WishlisttScreen.route();
