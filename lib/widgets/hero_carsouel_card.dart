@@ -6,18 +6,28 @@ import 'package:jstore/models/models.dart';
 class HeroCarsouelCard extends StatelessWidget {
 
 
-  final Category categories;
+  final Category? categories;
+  final Product? products;
 
-  const HeroCarsouelCard({super.key, required this.categories});
+  const HeroCarsouelCard({super.key,  this.categories , this.products});
 
   @override
   Widget build(BuildContext context) {
     return  InkWell(
       onTap: (){
-        Navigator.pushNamed(
+        if(products == null){
+           Navigator.pushNamed(
         context, '/CatalogScreen', 
         arguments: categories
         ); 
+        }
+        else if(categories == null ){
+        //   Navigator.pushNamed(
+        // context, '/CatalogScreen', 
+        // arguments: categories
+        // ); 
+        }
+       
       },
       child: Container(
         margin: const EdgeInsets.fromLTRB(5, 20, 5, 20),
@@ -25,7 +35,11 @@ class HeroCarsouelCard extends StatelessWidget {
             borderRadius: const BorderRadius.all(Radius.circular(5.0)),
             child: Stack(
               children: <Widget>[
-                Image.network(categories.imageUrl, fit: BoxFit.cover, width: 1000.0),
+                Image.network(
+
+                  products == null ? categories!.imageUrl : products!.imageUrl,
+
+                   fit: BoxFit.cover, width: 1000.0),
                 Positioned(
                   bottom: 0.0,
                   left: 0.0,
@@ -44,7 +58,7 @@ class HeroCarsouelCard extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 20.0),
                     child: Text(
-                      categories.name,
+                      products == null ? categories!.name  : " ",
                       style:const TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,

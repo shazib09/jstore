@@ -25,7 +25,7 @@ class AppRouter{
      case WishlisttScreen.routename: 
            return  WishlisttScreen.route();
       case ProductScreen.routename: 
-           return  ProductScreen.route();
+           return  ProductScreen.route(products: settings.arguments as Product);
       
      
       // case HomeScreen.routename:
